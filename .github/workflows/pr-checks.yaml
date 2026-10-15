@@ -38,7 +38,7 @@ jobs:
           echo "sentinel=true" >> "$GITHUB_OUTPUT"
           echo "protobuf=true" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         if: ${{ github.event_name != 'workflow_dispatch' }}
         with:
           fetch-depth: 0
@@ -46,7 +46,7 @@ jobs:
       - name: 🔎 Filter paths
         id: filter
         if: ${{ github.event_name != 'workflow_dispatch' }}
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         with:
           filters: |
             proctor:
@@ -64,7 +64,7 @@ jobs:
     if: ${{ needs.changes.outputs.proctor == 'true' || needs.changes.outputs.protobuf == 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: ❄️ Setup Nix
         uses: ./.github/actions/setup-nix
@@ -78,7 +78,7 @@ jobs:
           nix develop .#proctor --command fr-proctor-pr-check
 
       - name: 🧾 Report eslint results
-        uses: ataylorme/eslint-annotate-action@v3
+        uses: ataylorme/eslint-annotate-action@v4
         if: failure()
         with:
           check-name: 🧹 Lint & 🧪 Test Results
@@ -107,7 +107,7 @@ jobs:
           --health-start-period 10s
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: ❄️ Setup Nix
         uses: ./.github/actions/setup-nix
@@ -135,7 +135,7 @@ jobs:
           path: '**/checkstyle-result.xml'
 
       - name: 📤 Report Coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           directory: server
           name: codecov-server
@@ -149,7 +149,7 @@ jobs:
     if: ${{ needs.changes.outputs.sentinel == 'true' || needs.changes.outputs.protobuf == 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: ❄️ Setup Nix
         uses: ./.github/actions/setup-nix
@@ -162,7 +162,7 @@ jobs:
           nix build .#franklyn-sentinel-check
 
       - name: 📤 Report Coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v7
         with:
           directory: result/
           name: codecov-sentinel
