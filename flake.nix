@@ -6,10 +6,10 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # glibc 2.35: provides the runtime libraries bundled into the sentinel
     # portable/deb outputs.
-    nixpkgs-compat.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs-compat.url = "github:NixOS/nixpkgs/nixos-26.05";
     # glibc 2.38: stdenv the sentinel binary is linked against (oldest channel
     # crane supports).
-    nixpkgs-build.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-build.url = "github:NixOS/nixpkgs/nixos-26.05";
     rust-overlay.url = "github:oxalica/rust-overlay";
     flake-parts.url = "github:hercules-ci/flake-parts";
     crane.url = "github:ipetkov/crane";
