@@ -4,7 +4,6 @@ multi-ecosystem-groups:
   all-dependencies:
     schedule:
       interval: "monthly"
-      day: "monday"
     labels: ["dependencies"]
 
 
