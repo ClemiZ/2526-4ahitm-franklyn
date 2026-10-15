@@ -24,7 +24,7 @@
         <license.copyrightOwners>Jakob Huemer-Fistelberger, Eldin Beganovic, Clemens Zangenfeind,
             Gregor Geigenberger
         </license.copyrightOwners>
-        <record.builder.version>52</record.builder.version>
+        <record.builder.version>53</record.builder.version>
         <checkstyle.skip>false</checkstyle.skip>
     </properties>
 
