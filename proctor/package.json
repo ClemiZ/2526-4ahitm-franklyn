@@ -29,7 +29,7 @@
     "install": "^0.13.0",
     "keycloak-js": "^26.2.3",
     "markdown-it": "^14.2.0",
-    "pinia": "^3.0.3",
+    "pinia": "^4.0.3",
     "pinia-plugin-persistedstate": "^4.7.1",
     "reka-ui": "^2.9.6",
     "villus": "3.5.2",
