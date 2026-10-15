@@ -31,7 +31,7 @@ updates:
     directory: "/hugo"
     patterns: ["*"]
     multi-ecosystem-group: "all-dependencies"
-    labels: ["hugo"]
+    labels: ["documentation"]
 
   - package-ecosystem: "nix"
     directory: "/"
