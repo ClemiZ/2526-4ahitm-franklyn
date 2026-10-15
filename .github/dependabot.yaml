@@ -3,45 +3,20 @@ version: 2
 multi-ecosystem-groups:
   all-dependencies:
     schedule:
-      interval: "monthly"
-    labels: ["dependencies"]
-
+      interval: "weekly"
 
 updates:
-  - package-ecosystem: "bun"
-    directory: "/proctor"
-    patterns: ["*"]
-    multi-ecosystem-group: "all-dependencies"
-    labels: ["proctor" ]
-
   - package-ecosystem: "maven"
     directory: "/server"
     patterns: ["*"]
     multi-ecosystem-group: "all-dependencies"
-    labels: ["server"]
 
   - package-ecosystem: "cargo"
     directory: "/sentinel"
     patterns: ["*"]
     multi-ecosystem-group: "all-dependencies"
-    labels: ["sentinel"]
-
-  - package-ecosystem: "gomod"
-    directory: "/hugo"
-    patterns: ["*"]
-    multi-ecosystem-group: "all-dependencies"
-    labels: ["documentation"]
-
-  - package-ecosystem: "nix"
-    directory: "/"
-    ignore:
-      - dependency-name: "nixpkgs"
-    patterns: ["*"]
-    multi-ecosystem-group: "all-dependencies"
-    labels: ["nix"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
+    patterns: ["*"]
     multi-ecosystem-group: "all-dependencies"
-    patterns: [ "*" ]
-    labels: ["ci"]
