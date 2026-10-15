@@ -3,7 +3,7 @@ version: 2
 multi-ecosystem-groups:
   all-dependencies:
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
 updates:
   - package-ecosystem: "maven"
@@ -25,3 +25,16 @@ updates:
     patterns: [ "*" ]
     multi-ecosystem-group: "all-dependencies"
     labels: [ "proctor" ]
+  - package-ecosystem: "gomod"
+    directory: "/hugo"
+    patterns: [ "*" ]
+    multi-ecosystem-group: "all-dependencies"
+    labels: [ "documentation" ]
+
+  - package-ecosystem: "nix"
+    directory: "/"
+    ignore:
+      - dependency-name: "nixpkgs"
+    patterns: [ "*" ]
+    multi-ecosystem-group: "all-dependencies"
+    labels: [ "nix" ]
