@@ -8,15 +8,15 @@
 
     <properties>
         <revision>0.0.0</revision>
-        <compiler-plugin.version>3.14.1</compiler-plugin.version>
-        <jacoco.version>0.8.13</jacoco.version>
+        <compiler-plugin.version>3.16.0</compiler-plugin.version>
+        <jacoco.version>0.8.15</jacoco.version>
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.30.8</quarkus.platform.version>
-        <surefire-plugin.version>3.5.4</surefire-plugin.version>
+        <quarkus.platform.version>3.40.1</quarkus.platform.version>
+        <surefire-plugin.version>3.6.0</surefire-plugin.version>
         <license.licenseName>mit</license.licenseName>
         <license.organizationName>HTL Leonding</license.organizationName>
         <license.projectName>${project.name}</license.projectName>
@@ -24,7 +24,7 @@
         <license.copyrightOwners>Jakob Huemer-Fistelberger, Eldin Beganovic, Clemens Zangenfeind,
             Gregor Geigenberger
         </license.copyrightOwners>
-        <record.builder.version>52</record.builder.version>
+        <record.builder.version>53</record.builder.version>
         <checkstyle.skip>false</checkstyle.skip>
     </properties>
 
@@ -49,7 +49,7 @@
                 <groupId>org.jdbi</groupId>
                 <artifactId>jdbi3-bom</artifactId>
                 <type>pom</type>
-                <version>3.51.0</version>
+                <version>3.55.0</version>
                 <scope>import</scope>
             </dependency>
         </dependencies>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.7.9</version>
+            <version>42.7.14</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -107,7 +107,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>5.18.0</version>
+            <version>5.24.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -185,7 +185,7 @@
             <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.10.4</version>
                 <configuration>
                     <java>
                         <endWithNewline/>
@@ -208,7 +208,7 @@
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>10.21.4</version>
+                        <version>14.3.0</version>
                     </dependency>
                 </dependencies>
                 <configuration>
