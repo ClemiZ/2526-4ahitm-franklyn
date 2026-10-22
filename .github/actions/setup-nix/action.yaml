@@ -21,7 +21,7 @@ runs:
         authToken: "${{ inputs.cachix_auth_token }}"
 
     - name: ☕ Setup Maven Cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       if: ${{ inputs.environment == 'server' || inputs.environment == '' }}
       with:
         path: ~/.m2/repository
@@ -30,7 +30,7 @@ runs:
           ${{ runner.os }}-maven-
 
     - name: 🦀 Setup Rust Cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       if: ${{ inputs.environment == 'sentinel' || inputs.environment == '' }}
       with:
         path: |
@@ -44,7 +44,7 @@ runs:
           ${{ runner.os }}-${{ runner.arch }}-cargo-
 
     - name: 🦦 Setup Hugo Cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       if: ${{ inputs.environment == 'hugo' || inputs.environment == '' }}
       with:
         path: ${{ runner.temp }}/hugo_cache
@@ -53,7 +53,7 @@ runs:
           ${{ runner.os }}-hugo-
 
     - name: 📱 Setup SPM Cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       if: ${{ inputs.environment == 'ios' || inputs.environment == '' }}
       with:
         path: |
@@ -64,7 +64,7 @@ runs:
           ${{ runner.os }}-spm-
 
     - name: 🍞 Setup Bun Cache
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       if: ${{ inputs.environment == 'proctor' || inputs.environment == '' }}
       with:
         path: |
