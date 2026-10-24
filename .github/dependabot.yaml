@@ -58,9 +58,13 @@ updates:
         patterns: ["*"]
     labels: ["dependencies", "ci"]
 
-  # Dockerfiles (adjust directories to where yours live)
+  # Dockerfiles
   - package-ecosystem: "docker"
-    directories: ["/server", "/proctor", "/sentinel"]
+    directories:
+      - "/cicd/compose/aptly"
+      - "/hugo/docker"
+      - "/proctor/docker"
+      - "/server/src/main/docker"
     schedule:
       interval: "monthly"
     groups:
@@ -70,7 +74,9 @@ updates:
 
   # Compose files
   - package-ecosystem: "docker-compose"
-    directory: "/"
+    directories:
+      - "/cicd/compose"
+      - "/server/docker"
     schedule:
       interval: "monthly"
     groups:
