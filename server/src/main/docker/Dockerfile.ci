@@ -3,9 +3,9 @@
 # Requires:
 #   - franklyn-server-*.jar (build artifact)
 #   - server/src/main/docker/entrypoint.sh
-FROM mwader/static-ffmpeg:7.1 AS ffmpeg
+FROM mwader/static-ffmpeg:9.0 AS ffmpeg
 
-FROM eclipse-temurin:21.0.9_10-jre-ubi9-minimal
+FROM eclipse-temurin:24.0.2_12-jre-ubi9-minimal
 COPY --from=ffmpeg /ffmpeg /usr/local/bin/
 COPY --from=ffmpeg /ffprobe /usr/local/bin/
 
