@@ -9,6 +9,7 @@ updates:
     groups:
       bun-all:
         patterns: ["*"]
+    open-pull-requests-limit: 15
     labels: ["dependencies", "proctor"]
 
   # Quarkus server: security updates only (see notes)
@@ -16,6 +17,10 @@ updates:
     directory: "/server"
     schedule:
       interval: "monthly"
+    groups:
+      maven-all:
+        patterns: ["*"]
+    open-pull-requests-limit: 15
     labels: ["dependencies", "server"]
 
   # Rust client
@@ -26,6 +31,7 @@ updates:
     groups:
       cargo-all:
         patterns: ["*"]
+    open-pull-requests-limit: 15
     labels: ["dependencies", "sentinel"]
 
   # Hugo docs
@@ -36,6 +42,7 @@ updates:
     groups:
       gomod-all:
         patterns: ["*"]
+    open-pull-requests-limit: 15
     labels: ["dependencies", "documentation"]
 
   # Nix flake inputs
@@ -43,6 +50,7 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 15
     ignore:
       - dependency-name: "nixpkgs-build"
       - dependency-name: "nixpkgs-compat"
@@ -67,6 +75,7 @@ updates:
       - "/server/src/main/docker"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 15
     groups:
       docker-all:
         patterns: ["*"]
@@ -79,6 +88,7 @@ updates:
       - "/server/docker"
     schedule:
       interval: "monthly"
+    open-pull-requests-limit: 15
     groups:
       compose-all:
         patterns: ["*"]
