@@ -2,7 +2,7 @@
   description = "Franklyn all deps flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # glibc 2.35: provides the runtime libraries bundled into the sentinel
     # portable/deb outputs.
