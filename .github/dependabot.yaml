@@ -35,6 +35,8 @@ updates:
     directory: "/hugo"
     schedule:
       interval: "monthly"
+    allow:
+      - dependency-type: "all"
     groups:
       gomod-all:
         patterns: ["*"]
